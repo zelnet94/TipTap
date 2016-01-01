@@ -30,12 +30,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-LT-89a">
-                                <rect key="frame" x="186" y="167" width="396" height="31"/>
-                                <connections>
-                                    <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vxd-Vj-6ew"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0g-hM-WPU">
                                 <rect key="frame" x="268" y="217" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
@@ -79,6 +73,12 @@ CA
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Rrr-TU-kNy"/>
                                 </connections>
                             </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-LT-89a">
+                                <rect key="frame" x="186" y="167" width="396" height="31"/>
+                                <connections>
+                                    <action selector="taxPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vxd-Vj-6ew"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -147,6 +147,29 @@ CA
         <scene sceneID="HIG-m2-hHG">
             <objects>
                 <viewController storyboardIdentifier="Settings" id="MyK-n8-7hW" customClass="SettingsViewController" customModule="TipTap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fBY-Vd-MbP"/>
+                        <viewControllerLayoutGuide type="bottom" id="tAY-fT-Mot"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XbL-tV-LgR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OoD-z4-YVF">
+                                <rect key="frame" x="172" y="156" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLa-U4-0ld">
+                                <rect key="frame" x="488" y="156" width="95" height="30"/>
+                                <state key="normal" title="Change Tip %"/>
+                                <connections>
+                                    <action selector="setlowerTipFieldButton:" destination="MyK-n8-7hW" eventType="touchUpInside" id="DZU-zd-fJh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <navigationItem key="navigationItem" title="Settings" id="GTA-FC-gSC" userLabel="Settings" customClass="TipTapSettings"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ia7-3O-wti" userLabel="First Responder" sceneMemberID="firstResponder"/>

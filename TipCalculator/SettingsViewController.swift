@@ -8,7 +8,28 @@
 
 import UIKit
 
-class SettingViewController: ViewController {
+class SettingsViewController: UIViewController {
     
-       
-}
+    @IBOutlet weak var lowerTipField: UITextField!
+    @IBOutlet weak var averageTipField: UITextField!
+    @IBOutlet weak var higherTipField: UITextField!
+    
+    let customTip = NSUserDefaults.standardUserDefaults()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+        }
+        
+    @IBAction func setlowerTipFieldButton(sender: AnyObject) {
+        customTip.setObject(lowerTipField.text, forKey: "one")
+
+        }
+        
+    }
+        
+

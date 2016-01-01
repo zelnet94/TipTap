@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     
-    let defaults = NSUserDefaults.standardUserDefaults()
+
     let tipCalc = TipCalculatorModel(total: 33.25, taxPct: 0.06)
     var possibleTips = Dictionary<Int, (tipAmt:Double, total:Double)>()
     var sortedtipValue:[Int] = []
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        refreshUI()
+        totalTextField.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,6 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBAction func viewTapped (sender : AnyObject) {
         totalTextField.resignFirstResponder()
     }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedtipValue.count
