@@ -18,7 +18,7 @@ The following **optional** features are implemented:
 * [ ] UI animations
 * [x] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
@@ -34,7 +34,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+There were a few challenges setting up this app. For one, it was entirely created in a virtual machine using Mac OSX on a Windows computer. Secondly, the tip percentage setting is still a work in progress, still trying to find a connection between the setting and the default max percentage, which is 10%.  
 
 ## License
 
