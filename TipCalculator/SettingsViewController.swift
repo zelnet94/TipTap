@@ -25,8 +25,8 @@ class SettingsViewController: UIViewController {
             super.didReceiveMemoryWarning()
         }
         
-    @IBAction func setlowerTipFieldButton(sender: AnyObject) {
-        customTip.setObject(lowerTipField.text, forKey: "one")
+    @IBAction func sethigherTipFieldButton(sender: AnyObject) {
+        customTip.setObject(higherTipField.text, forKey: "one")
 
         }
         
